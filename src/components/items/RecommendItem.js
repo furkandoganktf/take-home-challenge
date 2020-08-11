@@ -12,12 +12,10 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const RecommendItem = (fieldValues, hasDivider = false) => {
+const RecommendItem = ({ fieldValues, hasDivider = false }) => {
   const classes = useStyles();
   const {
-    fieldValues: {
-      node: { title },
-    },
+    node: { title },
   } = fieldValues;
   return (
     <>

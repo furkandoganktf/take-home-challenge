@@ -1,11 +1,9 @@
 import React from "react";
 import { Divider, Checkbox, Grid, Typography } from "@material-ui/core";
 
-const TodoItem = (fieldValues, hasDivider = false) => {
+const TodoItem = ({ fieldValues, hasDivider = false }) => {
   const {
-    fieldValues: {
-      node: { title },
-    },
+    node: { title },
   } = fieldValues;
   return (
     <>

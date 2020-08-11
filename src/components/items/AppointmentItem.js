@@ -12,15 +12,13 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
 }));
-const AppointmentItem = (fieldValues, hasDivider = false) => {
+const AppointmentItem = ({ fieldValues, hasDivider = false }) => {
   const classes = useStyles();
   const {
-    fieldValues: {
-      node: {
-        title,
-        startingDate,
-        location: { title: locationTitle },
-      },
+    node: {
+      title,
+      startingDate,
+      location: { title: locationTitle },
     },
   } = fieldValues;
 
