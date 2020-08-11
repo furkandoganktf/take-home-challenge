@@ -63,26 +63,26 @@ const names = {
 const BoxView = ({ name, items = [] }) => {
   const classes = useStyles();
   const itemsLength = items.length;
-  const boxValues = names[name];
-  const buttonStyle = boxValues.hasButton ? clsx(classes.button, classes[boxValues.buttonClass]) : classes.button;
+  const listValues = names[name];
+  const buttonStyle = listValues.hasButton ? clsx(classes.button, classes[listValues.buttonClass]) : classes.button;
   return (
     <div>
       <Card className={classes.root}>
         <CardHeader
-          title={<div className={classes.title}>{boxValues.title}</div>}
-          subheader={boxValues.subheader}
-          style={{ color: boxValues.titleColor }}
+          title={<div className={classes.title}>{listValues.title}</div>}
+          subheader={listValues.subheader}
+          style={{ color: listValues.titleColor }}
         />
         <Divider />
         <CardContent>
           {items.map((fieldValues, index) => (
-            <boxValues.component key={index} hasDivider={index !== itemsLength - 1} fieldValues={fieldValues} />
+            <listValues.component key={index} hasDivider={index !== itemsLength - 1} fieldValues={fieldValues} />
           ))}
         </CardContent>
-        {boxValues.hasButton && (
+        {listValues.hasButton && (
           <CardActions disableSpacing>
             <Button fullWidth variant="outlined" color="primary" className={buttonStyle} endIcon={<ArrowForwardIcon />}>
-              {boxValues.buttonText}
+              {listValues.buttonText}
             </Button>
           </CardActions>
         )}
