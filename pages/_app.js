@@ -32,8 +32,7 @@ const mocks = [
               {
                 node: {
                   slug: "tip-keep-a-lint-roller-in-your-purse-or-bag-to-rol",
-                  title:
-                    "Tip: keep a lint roller in your purse or bag to roll over your head while hair falls out to avoid it getting places",
+                  title: "Tip: keep a lint roller in your purse or bag to roll over your head while hair falls out to avoid it getting places",
                 },
               },
             ],
@@ -70,16 +69,14 @@ const mocks = [
                 node: {
                   slug: "get-blood-tests-to-check-kidney-liver-and-heart-fu",
                   startingDate: "2020-06-12T07:38:36+00:00",
-                  title:
-                    "Get blood tests to check kidney, liver, and heart function",
+                  title: "Get blood tests to check kidney, liver, and heart function",
                 },
               },
               {
                 node: {
                   slug: "stop-taking-herbal-remedies-and-other-dietary-supplements",
                   startingDate: "2020-06-12T07:38:36+00:00",
-                  title:
-                    "Stop taking herbal remedies and other dietary supplements",
+                  title: "Stop taking herbal remedies and other dietary supplements",
                 },
               },
               {
@@ -112,10 +109,7 @@ export default function MyApp(props) {
     <React.Fragment>
       <Head>
         <title>My page</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <MockedProvider mocks={mocks} addTypename={false}>
         <ThemeProvider theme={theme}>

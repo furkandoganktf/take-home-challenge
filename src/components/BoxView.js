@@ -4,9 +4,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Divider, makeStyles, CardActions, Button } from "@material-ui/core";
-import RecommendItem from "./Recommendation";
-import TodoItem from "./Todo";
-import AppointmentItem from "./Appointment";
+import { AppointmentItem, RecommendItem, TodoItem } from "./items";
 
 const useStyles = makeStyles((theme) => ({
   root: {

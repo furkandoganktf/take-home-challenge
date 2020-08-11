@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
 }));
-const AppointmentItem = (fieldValues) => {
+const AppointmentItem = (fieldValues, hasDivider = false) => {
   const classes = useStyles();
   const {
     fieldValues: {
@@ -56,8 +56,9 @@ const AppointmentItem = (fieldValues) => {
           </Grid>
         </Grid>
       ))}
+      {hasDivider && <Divider style={{ backgroundColor: "black", height: 2, marginTop: 20, marginBottom: 20 }} />}
     </>
   );
 };
 
-export default AppointmentItem;
+export { AppointmentItem };

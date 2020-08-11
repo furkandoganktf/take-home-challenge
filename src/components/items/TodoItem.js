@@ -22,4 +22,4 @@ const TodoItem = (fieldValues, hasDivider = false) => {
   );
 };
 
-export default TodoItem;
+export { TodoItem };

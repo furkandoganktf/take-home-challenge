@@ -45,4 +45,4 @@ const RecommendItem = (fieldValues, hasDivider = false) => {
   );
 };
 
-export default RecommendItem;
+export { RecommendItem };
