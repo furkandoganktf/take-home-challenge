@@ -14,6 +14,7 @@ const materialTheme = createMuiTheme({
     MuiPickersBasePicker: {
       pickerView: {
         maxWidth: "500px",
+        minHeight: "320px",
       },
     },
   },
