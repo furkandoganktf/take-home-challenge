@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -17,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
     justifyContent: "left",
+    border: "none",
+  },
+  appointmentButton: {
+    backgroundColor: "rgb(239,247,255)",
+    color: "rgb(44,151,251)",
+  },
+  recommendButton: {
     backgroundColor: "rgb(237,249,243)",
     color: "rgb(0,190,116)",
   },
@@ -27,22 +35,27 @@ const names = {
   todo: {
     title: "To-Dos",
     subheader: "",
-    buttonText: "",
     hasButton: false,
+    buttonText: "",
+    titleColor: "rgb(55,177,89)",
     component: TodoItem,
   },
   recommendation: {
     title: "Recommended",
     subheader: "Upcoming To-Dos based on your profile and treatment timeline",
-    buttonText: "View All Recommendations",
     hasButton: true,
+    buttonText: "View All Recommendations",
+    buttonClass: "recommendButton",
+    titleColor: "rgb(0,0,0)",
     component: RecommendItem,
   },
   appointment: {
     title: "Appointments",
     subheader: "",
-    buttonText: " What You Need to Know",
     hasButton: true,
+    buttonText: " What You Need to Know",
+    buttonClass: "appointmentButton",
+    titleColor: "rgb(44,151,251)",
     component: AppointmentItem,
   },
 };
@@ -51,10 +64,15 @@ const BoxView = ({ name, items = [] }) => {
   const classes = useStyles();
   const itemsLength = items.length;
   const boxValues = names[name];
+  const buttonStyle = boxValues.hasButton ? clsx(classes.button, classes[boxValues.buttonClass]) : classes.button;
   return (
     <div>
       <Card className={classes.root}>
-        <CardHeader title={<div className={classes.title}>{boxValues.title}</div>} subheader={boxValues.subheader} />
+        <CardHeader
+          title={<div className={classes.title}>{boxValues.title}</div>}
+          subheader={boxValues.subheader}
+          style={{ color: boxValues.titleColor }}
+        />
         <Divider />
         <CardContent>
           {items.map((fieldValues, index) => (
@@ -63,7 +81,7 @@ const BoxView = ({ name, items = [] }) => {
         </CardContent>
         {boxValues.hasButton && (
           <CardActions disableSpacing>
-            <Button fullWidth variant="outlined" color="primary" className={classes.button} endIcon={<ArrowForwardIcon />}>
+            <Button fullWidth variant="outlined" color="primary" className={buttonStyle} endIcon={<ArrowForwardIcon />}>
               {boxValues.buttonText}
             </Button>
           </CardActions>
