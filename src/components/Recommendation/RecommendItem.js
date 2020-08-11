@@ -2,7 +2,7 @@ import React from "react";
 import { Divider, makeStyles, Grid, Typography, IconButton } from "@material-ui/core";
 import { Clear, AddCircleOutlineOutlined } from "@material-ui/icons";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   typography: {
     fontWeight: "bold",
     display: "flex",
