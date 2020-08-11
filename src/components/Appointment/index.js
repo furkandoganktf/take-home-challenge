@@ -1,3 +1,3 @@
-import AppointmentList from './AppointmentList';
+import AppointmentItem from "./AppointmentItem";
 
-export default AppointmentList;
+export default AppointmentItem;

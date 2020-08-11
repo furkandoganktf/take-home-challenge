@@ -1,3 +1,3 @@
-import RecommendList from "./RecommendList";
+import RecommendItem from "./RecommendItem";
 
-export default RecommendList;
+export default RecommendItem;

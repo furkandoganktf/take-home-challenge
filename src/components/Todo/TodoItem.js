@@ -1,12 +1,12 @@
 import React from "react";
 import { Divider, Checkbox, Grid, Typography } from "@material-ui/core";
 
-const TodoItem = (todo, hasDivider = false) => {
+const TodoItem = (fieldValues, hasDivider = false) => {
   const {
-    todo: {
+    fieldValues: {
       node: { title },
     },
-  } = todo;
+  } = fieldValues;
   return (
     <>
       <Grid container wrap="nowrap" spacing={1}>

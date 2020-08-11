@@ -12,13 +12,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const RecommendItem = (recommendation, hasDivider = false) => {
+const RecommendItem = (fieldValues, hasDivider = false) => {
   const classes = useStyles();
   const {
-    recommendation: {
+    fieldValues: {
       node: { title },
     },
-  } = recommendation;
+  } = fieldValues;
   return (
     <>
       <Grid container wrap="nowrap" spacing={2}>

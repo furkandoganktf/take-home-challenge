@@ -12,17 +12,17 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
 }));
-const AppointmentItem = (appointment) => {
+const AppointmentItem = (fieldValues) => {
   const classes = useStyles();
   const {
-    appointment: {
+    fieldValues: {
       node: {
         title,
         startingDate,
         location: { title: locationTitle },
       },
     },
-  } = appointment;
+  } = fieldValues;
 
   const [date, time, am] = moment(startingDate).format("dddd, MMMM DD, YYYY_h:mm_a").split("_");
   const icons = [

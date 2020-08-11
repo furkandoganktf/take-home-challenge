@@ -4,9 +4,7 @@ import MomentUtils from "@date-io/moment";
 import moment from "moment";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import { usePlanner } from "../usePlanner";
-import TodoList from "../components/Todo";
-import RecommendList from "../components/Recommendation";
-import AppointmentList from "../components/Appointment";
+import BoxView from "../components/BoxView";
 import CustomCalendar from "../components/CustomCalendar";
 
 const CalendarApp = () => {
@@ -47,9 +45,9 @@ const CalendarApp = () => {
   return (
     <MuiPickersUtilsProvider utils={MomentUtils}>
       <CustomCalendar activityDates={{ appointmentsDates, tasksDates }} onDateChange={onDateChange} />
-      <TodoList items={taskItems} />
-      <RecommendList items={recommendedTaskDefinitions} />
-      <AppointmentList items={appointmentsItems} />
+      <BoxView name="todo" items={taskItems} />
+      <BoxView name="recommendation" items={recommendedTaskDefinitions} />
+      <BoxView name="appointment" items={appointmentsItems} />
     </MuiPickersUtilsProvider>
   );
 };
