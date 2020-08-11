@@ -13,13 +13,7 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: "red",
   },
-  title: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    fontWeight: "bold",
-  },
+  title: theme.title,
 }));
 
 const TodoList = ({ items = [] }) => {

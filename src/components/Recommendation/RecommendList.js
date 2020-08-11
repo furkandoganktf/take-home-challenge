@@ -20,13 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgb(237,249,243)",
     color: "rgb(0,190,116)",
   },
-  title: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    fontWeight: "bold",
-  },
+  title: theme.title,
 }));
 
 const RecommendList = ({ items = [] }) => {

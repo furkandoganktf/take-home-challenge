@@ -18,13 +18,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "left",
     backgroundColor: "rgb(238,247,255)",
   },
-  title: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    fontWeight: "bold",
-  },
+  title: theme.title,
 }));
 
 const AppointmentList = ({ items = [] }) => {
