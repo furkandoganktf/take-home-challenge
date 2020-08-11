@@ -3,7 +3,7 @@ import { makeStyles, Grid, Typography, Divider } from "@material-ui/core";
 import { Schedule, RoomOutlined, Today, Event } from "@material-ui/icons";
 import moment from "moment";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   typography: {
     fontWeight: "bold",
     display: "flex",
