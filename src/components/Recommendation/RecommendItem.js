@@ -1,0 +1,48 @@
+import React from "react";
+import { Divider, makeStyles, Grid, Typography, IconButton } from "@material-ui/core";
+import { Clear, AddCircleOutlineOutlined } from "@material-ui/icons";
+
+const useStyles = makeStyles((theme) => ({
+  typography: {
+    fontWeight: "bold",
+    display: "flex",
+    height: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+}));
+
+const RecommendItem = (recommendation, hasDivider = false) => {
+  const classes = useStyles();
+  const {
+    recommendation: {
+      node: { title },
+    },
+  } = recommendation;
+  return (
+    <>
+      <Grid container wrap="nowrap" spacing={2}>
+        <Grid item>
+          <IconButton>
+            <AddCircleOutlineOutlined style={{ color: "green" }} />
+          </IconButton>
+        </Grid>
+        <Grid item xs zeroMinWidth>
+          <Grid container wrap="nowrap" spacing={2}>
+            <Grid item xs={10}>
+              <Typography className={classes.typography}>{title}</Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <IconButton>
+                <Clear />
+              </IconButton>
+            </Grid>
+          </Grid>
+          {hasDivider && <Divider />}
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+
+export default RecommendItem;
